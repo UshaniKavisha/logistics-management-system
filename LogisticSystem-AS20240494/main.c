@@ -154,4 +154,9 @@ void enterDistance()
     printf("Enter 2nd city: ");
     scanf("%d",&city2);
 
+    if(city1<1 || city2<1 || city1>cityCount || city2>cityCount ||city1==city2)
+    {
+        printf("Invalid city numbers or conn't city numbers are same...\n");
+        return;
+    }
 }

@@ -139,6 +139,7 @@ void getDistance()
 
 void enterDistance()
 {
+    listCities();
     int city1,city2,d;
 
     if(cityCount<1)

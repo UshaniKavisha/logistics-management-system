@@ -4,9 +4,15 @@
 
 char cities[MAX_CITIES][40];
 int cityCount=0;
+void addCity();
 
 int main()
 {
 
     return 0;
+}
+
+void addCity()
+{
+
 }

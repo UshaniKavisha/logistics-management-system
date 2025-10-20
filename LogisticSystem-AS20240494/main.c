@@ -25,4 +25,16 @@ void addCity()
     printf("Enter your city name (unique name): ");
     scanf("%s",city);
 
+    for(int i=0;i<cityCount;i++)
+    {
+        if(strcmp(cities[i],city)==0)
+        {printf("you already entered this city!\n");
+         return;}
+    }
+
+        strcpy(cities[cityCount], city);
+        cityCount++;
+        printf("you successfully added city!\n");
+
+
 }

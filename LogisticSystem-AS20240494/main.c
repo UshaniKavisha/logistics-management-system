@@ -5,6 +5,7 @@
 
 char cities[MAX_CITIES][40];
 int cityCount=0;
+int distance[MAX_CITIES][MAX_CITIES];
 
 void addCity();
 void renameCity();

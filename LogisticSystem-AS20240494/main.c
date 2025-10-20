@@ -45,6 +45,7 @@ void addCity()
 
 void renameCity()
 {
+    listCities();
     if(cityCount==0)
     {
         printf("you didn't add cities yet!\n");
@@ -79,6 +80,7 @@ void renameCity()
 
 void removeCity()
 {
+    listCities();
     if(cityCount==0){
        printf("you didn't add cities yet!\n");
        return;

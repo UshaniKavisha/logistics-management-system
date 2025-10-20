@@ -63,4 +63,13 @@ void renameCity()
     printf("Rename city: ");
     scanf("%s",newCity);
 
+    for(int i=0;i<cityCount;i++)
+    {
+        if(strcmp(cities[i],newCity)==0)
+        {printf("you already entered this city!\n");
+         return;}
+    }
+        strcpy(cities[index - 1], newCity);
+        printf("you added new name added successfully!");
+
 }

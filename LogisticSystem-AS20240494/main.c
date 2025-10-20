@@ -232,5 +232,11 @@ int chooseVehicle()
     printf("Choose you want vehicle(Enter number (Van:0 ,Truck:1, Lorry:2)): ");
     scanf("%d",&choice);
 
+    if(choice<1 || choice>(VEHICLE-1))
+    {
+        printf("Invalid choice \n");
+        return ;
+    }
 
+    return choice;
 }

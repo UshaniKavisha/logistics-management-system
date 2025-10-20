@@ -91,4 +91,12 @@ void removeCity()
         printf("Invalid index!");
         return;
     }
+
+    for(int i= index-1; i<cityCount-1;i++)
+    {
+        strcpy(cities[i], cities[i + 1]);
+    }
+
+    cityCount--;
+    printf("City remove successfully! \n");
 }

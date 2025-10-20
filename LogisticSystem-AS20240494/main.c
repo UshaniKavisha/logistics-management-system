@@ -8,6 +8,7 @@ int cityCount=0;
 
 void addCity();
 void renameCity();
+void removeCity();
 
 int main()
 {
@@ -71,5 +72,11 @@ void renameCity()
     }
         strcpy(cities[index - 1], newCity);
         printf("you added new name added successfully!");
+
+}
+
+
+void removeCity()
+{
 
 }

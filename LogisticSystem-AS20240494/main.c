@@ -186,4 +186,18 @@ void displayDistance()
         printf("%s",cities[i]);
     }
 
+    printf("\n");
+
+    for(int i=0; i<cityCount;i++)
+    {
+        printf("%s",cities[i]);
+        for(int j=0;j<cityCount;j++)
+        {
+            if(distance[i][j]==-1)
+                printf("%s","-");
+            else
+                printf("%d",distance[i][j]);
+        }
+        printf("\n");
+    }
 }

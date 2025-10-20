@@ -180,4 +180,10 @@ void displayDistance()
         return;
     }
 
+    printf("\n Distance......\n");
+    for(int i=0; i<cityCount;i++)
+    {
+        printf("%s",cities[i]);
+    }
+
 }

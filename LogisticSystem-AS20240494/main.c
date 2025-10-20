@@ -139,5 +139,10 @@ void getDistance()
 
 void enterDistance()
 {
+    if(cityCount<1)
+    {
+        printf("Add least 2 cities,therefore you cann't give distance...\n ");
+        return;
+    }
 
 }

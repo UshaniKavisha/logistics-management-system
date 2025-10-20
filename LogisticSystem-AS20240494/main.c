@@ -11,8 +11,10 @@ void addCity();
 void renameCity();
 void removeCity();
 void listCities();
+
 void getDistance();
 void enterDistance();
+void displayDistance();
 
 int main()
 {
@@ -168,4 +170,9 @@ void enterDistance()
     distance[city2-1][city1-1]=d;
 
     printf("Distance added successfully....\n");
+}
+
+void displayDistance()
+{
+
 }

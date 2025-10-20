@@ -227,6 +227,10 @@ void displayVehicle()
 
 int chooseVehicle()
 {
+    int choice;
+    displayVehicle();
+    printf("Choose you want vehicle(Enter number (Van:0 ,Truck:1, Lorry:2)): ");
+    scanf("%d",&choice);
 
 
 }

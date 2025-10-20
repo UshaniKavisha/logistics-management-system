@@ -11,6 +11,7 @@ void addCity();
 void renameCity();
 void removeCity();
 void listCities();
+void getDistance();
 
 int main()
 {
@@ -117,4 +118,10 @@ void listCities()
     {
         printf("%d %s\n",i+1,cities[i]);
     }
+}
+
+
+void getDistance()
+{
+
 }

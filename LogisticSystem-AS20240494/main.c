@@ -9,6 +9,7 @@ int cityCount=0;
 void addCity();
 void renameCity();
 void removeCity();
+void listCities();
 
 int main()
 {
@@ -99,4 +100,9 @@ void removeCity()
 
     cityCount--;
     printf("City remove successfully! \n");
+}
+
+void listCities()
+{
+
 }

@@ -23,7 +23,7 @@ void enterDistance();
 void displayDistance();
 
 void displayVehicle();
-int chooseVehicle()
+int chooseVehicle();
 
 
 int main()

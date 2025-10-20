@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include <string.h>
 #define MAX_CITIES 30
+#define VEHICLE 3
 
 char cities[MAX_CITIES][40];
 int cityCount=0;
@@ -208,5 +209,7 @@ void displayVehicle()
 {
     printf("Type\tCapacity(kg)\tRate(LKR)\tAvg Speed(km/h)\tFuel Efficiency(km/l)\t");
     printf("- - - - - - - - - - - - - - - - - - - - - - - -- - - - - - - - - - - - - -");
+
+    for ()
 
 }

@@ -215,6 +215,9 @@ void displayVehicle()
     printf("Type\tCapacity(kg)\tRate(LKR)\tAvg Speed(km/h)\tFuel Efficiency(km/l)\t");
     printf("- - - - - - - - - - - - - - - - - - - - - - - -- - - - - - - - - - - - - -");
 
-    for ()
+    for (int i=0;i<VEHICLE;i++)
+    {
+
+    }
 
 }

@@ -5,7 +5,9 @@
 
 char cities[MAX_CITIES][40];
 int cityCount=0;
+
 void addCity();
+void renameCity();
 
 int main()
 {
@@ -36,5 +38,10 @@ void addCity()
         cityCount++;
         printf("you successfully added city!\n");
 
+}
+
+
+void renameCity()
+{
 
 }

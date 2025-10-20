@@ -139,10 +139,19 @@ void getDistance()
 
 void enterDistance()
 {
+    int city1,city2,d;
+
     if(cityCount<1)
     {
         printf("Add least 2 cities,therefore you cann't give distance...\n ");
         return;
     }
+
+
+    printf("Enter 1st city: ");
+    scanf("%d",&city1);
+
+    printf("Enter 2nd city: ");
+    scanf("%d",&city2);
 
 }

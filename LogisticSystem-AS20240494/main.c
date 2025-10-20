@@ -14,5 +14,14 @@ int main()
 
 void addCity()
 {
+    if(cityCount>=MAX_CITIES)
+    {
+        printf("you already reached your city limit.\n");
+        return;
+    }
+    char city[40];
+
+    printf("Enter your city name (unique name): ");
+    scanf("%s",city);
 
 }

@@ -249,4 +249,12 @@ void deliveryRequestHandling()
         printf("Add least 2 cities and their distance, therefore we cann't implement this...");
         return;
     }
+
+    int sourceCity,destinationCity;
+
+    printf("Enter source city number: ");
+    scanf("%d",sourceCity);
+
+    printf("Enter destination city number: ");
+    scanf("%d",destinationCity);
 }

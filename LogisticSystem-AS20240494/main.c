@@ -16,7 +16,7 @@ void getDistance();
 void enterDistance();
 void displayDistance();
 
-void displayVehical();
+void displayVehicle();
 
 int main()
 {
@@ -204,7 +204,7 @@ void displayDistance()
     }
 }
 
-void displayVehical()
+void displayVehicle()
 {
     printf("Type\tCapacity(kg)\tRate(LKR)\tAvg Speed(km/h)\tFuel Efficiency(km/l)\t");
     printf("- - - - - - - - - - - - - - - - - - - - - - - -- - - - - - - - - - - - - -");

@@ -244,5 +244,9 @@ int chooseVehicle()
 
 void deliveryRequestHandling()
 {
-
+    if(cityCount<2)
+    {
+        printf("Add least 2 cities and their distance, therefore we cann't implement this...");
+        return;
+    }
 }

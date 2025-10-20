@@ -7,6 +7,11 @@
 char cities[MAX_CITIES][40];
 int cityCount=0;
 int distance[MAX_CITIES][MAX_CITIES];
+char vehicle[VEHICLE][30]={"Van", "Truck" , "Lorry"};
+int capacity[VEHICLE]={1000,5000,10000};
+int rate[VEHICLE]={30,40,80};
+int avgSpeed[VEHICLE]={60,50,45};
+int fuelEfficiency[VEHICLE]={12,6,4};
 
 void addCity();
 void renameCity();

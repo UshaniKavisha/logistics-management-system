@@ -12,6 +12,7 @@ void renameCity();
 void removeCity();
 void listCities();
 void getDistance();
+void enterDistance();
 
 int main()
 {
@@ -134,4 +135,9 @@ void getDistance()
         }
 
     }
+}
+
+void enterDistance()
+{
+
 }

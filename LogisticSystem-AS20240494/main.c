@@ -43,5 +43,24 @@ void addCity()
 
 void renameCity()
 {
+    if(cityCount==0)
+    {
+        printf("you didn't add cities yet!\n");
+        return;
+    }
+    int index;
+
+    printf("Enter the number of city you want to rename: ");
+    scanf("%d",&index);
+
+    if(index < 1 || index > cityCount)
+    {
+        printf("Invalid index!");
+        return;
+    }
+
+    char newCity[40];
+    printf("Rename city: ");
+    scanf("%s",newCity);
 
 }

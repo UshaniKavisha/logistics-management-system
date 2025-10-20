@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 #define MAX_CITIES 30
 
 char cities[MAX_CITIES][40];

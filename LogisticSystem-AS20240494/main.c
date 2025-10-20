@@ -104,5 +104,14 @@ void removeCity()
 
 void listCities()
 {
+    if(cityCount==0){
+       printf("you didn't add cities yet!\n");
+       return;
+    }
 
+    printf("\n You added cities..\n");
+    for (int i=0;i<cityCount;i++)
+    {
+        printf("%d %s\n",i+1,cities[i]);
+    }
 }

@@ -24,6 +24,7 @@ void displayDistance();
 
 void displayVehicle();
 int chooseVehicle();
+void deliveryRequestHandling();
 
 
 int main()
@@ -239,4 +240,9 @@ int chooseVehicle()
     }
 
     return choice;
+}
+
+void deliveryRequestHandling()
+{
+
 }

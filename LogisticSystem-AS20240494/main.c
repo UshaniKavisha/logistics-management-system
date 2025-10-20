@@ -217,6 +217,7 @@ void displayVehicle()
 
     for (int i=0;i<VEHICLE;i++)
     {
+        printf("%s \t %d \t %d \t %d \t %d \t ",vehicle[i],capacity[i],rate[i],avgSpeed[i],fuelEfficiency[i]);
 
     }
 

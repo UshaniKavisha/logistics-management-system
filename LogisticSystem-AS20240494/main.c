@@ -257,4 +257,10 @@ void deliveryRequestHandling()
 
     printf("Enter destination city number: ");
     scanf("%d",destinationCity);
+
+    if(sourceCity<1 || sourceCity==destinationCity || sourceCity>cityCount || destinationCity<1 || destinationCity>cityCount)
+    {
+        printf("Invalid city numbers or conn't city numbers are same...\n");
+        return;
+    }
 }

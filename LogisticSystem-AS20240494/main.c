@@ -23,6 +23,8 @@ void enterDistance();
 void displayDistance();
 
 void displayVehicle();
+int chooseVehicle()
+
 
 int main()
 {
@@ -220,5 +222,11 @@ void displayVehicle()
         printf("%s \t %d \t %d \t %d \t %d \t ",vehicle[i],capacity[i],rate[i],avgSpeed[i],fuelEfficiency[i]);
 
     }
+
+}
+
+int chooseVehicle()
+{
+
 
 }

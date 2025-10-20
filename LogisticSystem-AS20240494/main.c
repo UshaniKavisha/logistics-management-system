@@ -83,4 +83,12 @@ void removeCity()
        return;
     }
 
+    printf("Enter the number of city you want to rename: ");
+    scanf("%d",&index);
+
+    if(index < 1 || index > cityCount)
+    {
+        printf("Invalid index!");
+        return;
+    }
 }

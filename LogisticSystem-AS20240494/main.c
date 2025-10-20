@@ -159,4 +159,12 @@ void enterDistance()
         printf("Invalid city numbers or conn't city numbers are same...\n");
         return;
     }
+
+    printf("Enter distance between %s and %s in km: ",cities[city1-1],cities[city2-1]);
+    scanf("%d",&d);
+
+    distance[city1-1][city2-2]=d;
+    distance[city2-1][city1-1]=d;
+
+    printf("Distance added successfully....\n");
 }

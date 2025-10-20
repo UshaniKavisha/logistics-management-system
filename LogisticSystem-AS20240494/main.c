@@ -16,6 +16,8 @@ void getDistance();
 void enterDistance();
 void displayDistance();
 
+void displayVehical();
+
 int main()
 {
 
@@ -200,4 +202,9 @@ void displayDistance()
         }
         printf("\n");
     }
+}
+
+void displayVehical()
+{
+
 }

@@ -274,6 +274,7 @@ void deliveryRequestHandling()
         printf("Between two cities distance not entered yet...\n");
     }
 
-
+    int vehicalType=chooseVehicle();
+    if(vehicalType==-1)return;
 
 }

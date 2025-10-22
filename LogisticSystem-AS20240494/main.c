@@ -4,6 +4,7 @@
 #define MAX_CITIES 30
 #define VEHICLE 3
 #define FUEL_PRICE 310.0
+#define MAX_DELIVERIES 50
 
 char cities[MAX_CITIES][40];
 int cityCount=0;
@@ -13,6 +14,23 @@ int capacity[VEHICLE]={1000,5000,10000};
 int rate[VEHICLE]={30,40,80};
 int avgSpeed[VEHICLE]={60,50,45};
 int fuelEfficiency[VEHICLE]={12,6,4};
+
+typedef struct {
+    int sourceCity;
+    int destinationCity;
+    float weight;
+    int vehicalType;
+    float distance;
+    float deliveryCost;
+    float fuelCost;
+    float operationalCost;
+    float profit;
+    float customerCharge;
+    float delivaryTime;
+} DeliveryRecord;
+
+DeliveryRecord deliveries[MAX_DELIVERIES];
+int deliveryCount = 0;
 
 void addCity();
 void renameCity();

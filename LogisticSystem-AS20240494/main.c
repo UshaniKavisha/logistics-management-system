@@ -3,6 +3,7 @@
 #include <string.h>
 #define MAX_CITIES 30
 #define VEHICLE 3
+#define FUEL_PRICE 310.0
 
 char cities[MAX_CITIES][40];
 int cityCount=0;
@@ -42,7 +43,7 @@ void addCity()
     }
     char city[40];
 
-    printf("Enter your city name (unique name): ");
+    printf("Enter your city name (unique name,also no spaces): ");
     scanf("%s",city);
 
     for(int i=0;i<cityCount;i++)
@@ -97,6 +98,7 @@ void renameCity()
 void removeCity()
 {
     listCities();
+    int index;
     if(cityCount==0){
        printf("you didn't add cities yet!\n");
        return;
@@ -155,7 +157,7 @@ void enterDistance()
     listCities();
     int city1,city2,d;
 
-    if(cityCount<1)
+    if(cityCount<2)
     {
         printf("Add least 2 cities,therefore you cann't give distance...\n ");
         return;
@@ -177,7 +179,7 @@ void enterDistance()
     printf("Enter distance between %s and %s in km: ",cities[city1-1],cities[city2-1]);
     scanf("%d",&d);
 
-    distance[city1-1][city2-2]=d;
+    distance[city1-1][city2-1]=d;
     distance[city2-1][city1-1]=d;
 
     printf("Distance added successfully....\n");
@@ -282,4 +284,9 @@ void deliveryRequestHandling()
         printf("You entered weight exceeds vehicle capacity!\n");
     }
 
+    float D = distance[sourceCity-1][destinationCity-1];
+    float R = rate[vehicalType];
+    float S = avgSpeed[vehicalType];
+    float E = fuelEfficiency[vehicalType];
+    float F = FUEL_PRICE;
 }

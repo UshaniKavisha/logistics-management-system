@@ -267,7 +267,7 @@ void deliveryRequestHandling()
 
     float weight;
     printf("Enter weight(kg):  ");
-    scanf("%f",weight);
+    scanf("%f",&weight);
 
 
 

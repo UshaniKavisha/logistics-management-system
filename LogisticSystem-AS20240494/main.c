@@ -316,4 +316,23 @@ void deliveryRequestHandling()
     float profit=deliveryCost*0.25;
     float customerCharge=totalOperationalCost+profit;
 
+    if(deliveryCount<MAX_DELIVERIES)
+    {
+        deliveries[deliveryCount].sourceCity=sourceCity-1;
+        deliveries[deliveryCount].destinationCity=destinationCity-1;
+        deliveries[deliveryCount].weight=weight;
+        deliveries[deliveryCount].vehicalType=vehicalType;
+        deliveries[deliveryCount].distance=D;
+        deliveries[deliveryCount].deliveryCost=deliveryCost;
+        deliveries[deliveryCount].fuelCost=fuelCost;
+        deliveries[deliveryCount].operationalCost=totalOperationalCost;
+        deliveries[deliveryCount].profit=profit;
+        deliveries[deliveryCount].customerCharge=customerCharge;
+        deliveries[deliveryCount].delivaryTime=delivaryTime;
+        deliveryCount++;
+    }
+    else
+    {
+        printf("You reached maximum delivery.....\n");
+    }
 }

@@ -289,4 +289,13 @@ void deliveryRequestHandling()
     float S = avgSpeed[vehicalType];
     float E = fuelEfficiency[vehicalType];
     float F = FUEL_PRICE;
+
+    float deliveryCost = D*R*(1+(weight/10000.0));
+    float delivaryTime=D/S;
+    float fuelConsumption=D/E;
+    float fuelCost=fuelConsumption*F;
+    float totalOperationalCost=deliveryCost+fuelCost;
+    float profit=deliveryCost*0.25;
+    float customerCharge=totalOperationalCost+profit;
+
 }

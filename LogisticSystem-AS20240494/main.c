@@ -277,4 +277,9 @@ void deliveryRequestHandling()
     int vehicalType=chooseVehicle();
     if(vehicalType==-1)return;
 
+    if(weight>capacity[vehicalType])
+    {
+        printf("You entered weight exceeds vehicle capacity!\n");
+    }
+
 }

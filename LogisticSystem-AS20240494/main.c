@@ -264,4 +264,11 @@ void deliveryRequestHandling()
         printf("Invalid city numbers or conn't city numbers are same...\n");
         return;
     }
+
+    float weight;
+    printf("Enter weight(kg):  ");
+    scanf("%f",weight);
+
+
+
 }

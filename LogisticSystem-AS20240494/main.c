@@ -269,6 +269,11 @@ void deliveryRequestHandling()
     printf("Enter weight(kg):  ");
     scanf("%f",&weight);
 
+    if(distance[sourceCity-1][destinationCity-1]==-1)
+    {
+        printf("Between two cities distance not entered yet...\n");
+    }
+
 
 
 }

@@ -183,12 +183,13 @@ void renameCity()
 
 void removeCity()
 {
-    listCities();
-    int index;
     if(cityCount==0){
        printf("you didn't add cities yet!\n");
        return;
     }
+
+    int index;
+    listCities();
 
     printf("Enter the number of city you want to rename: ");
     scanf("%d",&index);

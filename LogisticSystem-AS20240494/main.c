@@ -340,5 +340,10 @@ void deliveryRequestHandling()
 
 void findingTheLeastCostRoute()
 {
+    if(cityCount>4)
+    {
+        printf("Route search limited to 4 cities only.\n");
+        return;
+    }
 
 }

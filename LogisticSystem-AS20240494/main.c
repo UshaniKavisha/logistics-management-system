@@ -352,5 +352,24 @@ void findingTheLeastCostRoute(int startIndex, int endIndex)
        if(i!=startIndex && i!=endIndex)citiesToVisit[j++] = i;
     }
 
+    int minDistance = INT_MAX;
+    int bestRoute[4];
+
+    for(int i=0;i<cityCount-2;i++)
+    {
+         for(int j=0;j<cityCount-2;j++)
+         {
+             if(i==j)continue;
+            int totalDist=distance[startIndex][citiesToVisit[i]]+distance[citiesToVisit[i]][citiesToVisit[j]]+distance[citiesToVisit[j]][endIndex];
+            if(totalDist<minDistance)
+            {
+                minDistance=totalDist;
+                bestRoute[0]=startIndex;
+                bestRoute[1]=citiesToVisit[i];
+                bestRoute[2]=citiesToVisit[j];
+                bestRoute[3]=endIndex;
+            }
+         }
+    }
 
 }

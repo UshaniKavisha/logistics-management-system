@@ -50,6 +50,62 @@ void findingTheLeastCostRoute(int startIndex, int endIndex);
 
 int main()
 {
+    int choice;
+
+    do
+    {
+        printf("/n------------------------------------------------------/n");
+        printf("LOGISTIC MANAGEMENT SYSTEM/n");
+        printf("-------------------------------------------------------/n");
+        printf("1.Add a new city\n");
+        printf("2.Rename a city\n");
+        printf("3.Remove a city\n");
+        printf("4.List all cities\n");
+        printf("5.Enter distance\n");
+        printf("6.Display distance table\n");
+        printf("7.Display vehicle details\n");
+        printf("8.Handle a delivery request\n");
+        printf("9.Find least cost route(limited to 4 cities only)\n");
+        printf("0.Exit.............\n");
+        printf("Enter your choice: ");
+        scanf("%d",&choice);
+
+        switch (choice)
+        {
+            case 1:
+                addCity();
+                break;
+            case 2:
+                renameCity();
+                break;
+            case 3:
+                removeCity();
+                break;
+            case 4:
+                listCities();
+                break;
+            case 5:
+                enterDistance();
+                break;
+            case 6:
+                displayDistance();
+                break;
+            case 7:
+                displayVehicle();
+                break;
+            case 8:
+                deliveryRequestHandling();
+                break;
+            case 9:
+                findingTheLeastCostRoute(startIndex- 1, endIndex- 1);
+                break;
+            case 0:
+                printf("Exiting the program....\n");
+                break;
+            default:
+                printf("Invalid choice! Please try again.\n");
+        }
+    } while (choice != 0);
 
     return 0;
 }

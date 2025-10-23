@@ -44,7 +44,7 @@ void displayDistance();
 void displayVehicle();
 int chooseVehicle();
 void deliveryRequestHandling();
-void findingTheLeastCostRoute();
+void findingTheLeastCostRoute(int startIndex, int endIndex);
 
 
 int main()
@@ -338,7 +338,7 @@ void deliveryRequestHandling()
     }
 }
 
-void findingTheLeastCostRoute()
+void findingTheLeastCostRoute(int startIndex, int endIndex)
 {
     if(cityCount>4)
     {

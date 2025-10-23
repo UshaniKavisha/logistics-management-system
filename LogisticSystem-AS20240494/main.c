@@ -99,6 +99,7 @@ int main()
             case 9:
                 {
                     int start, end;
+                    listCities();
 
                     printf("Enter start city number: ");
                     scanf("%d",&start);

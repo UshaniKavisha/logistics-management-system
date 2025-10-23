@@ -55,9 +55,9 @@ int main()
 
     do
     {
-        printf("/n------------------------------------------------------/n");
-        printf("LOGISTIC MANAGEMENT SYSTEM/n");
-        printf("-------------------------------------------------------/n");
+        printf("\n------------------------------------------------------\n");
+        printf("LOGISTIC MANAGEMENT SYSTEM\n");
+        printf("-------------------------------------------------------\n");
         printf("1.Add a new city\n");
         printf("2.Rename a city\n");
         printf("3.Remove a city\n");
@@ -407,13 +407,13 @@ void deliveryRequestHandling()
 
     printf("\n----------------------------------------------------------\n");
     printf("DELIVERY COST ESTIMATION\n");
-    printf("\n----------------------------------------------------------\n");
+    printf("----------------------------------------------------------\n");
     printf("From: %s\n",cities[sourceCity-1]);
     printf("To: %s\n",cities[destinationCity-1]);
     printf("Minimum Distance: %.2f km\n",D);
     printf("Vehicle: %s\n",vehicle[vehicalType]);
     printf("Weight: %.2f kg\n",weight);
-    printf("\n----------------------------------------------------------\n");
+    printf("---------------------------------------------------------\n");
     printf("Base Cost: %.2f LKR\n",deliveryCost);
     printf("Fuel Used: %.2f L\n",fuelConsumption);
     printf("Fuel Cost: %.2f LKR\n",fuelCost);

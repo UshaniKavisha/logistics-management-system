@@ -51,6 +51,7 @@ void findingTheLeastCostRoute(int startIndex, int endIndex);
 int main()
 {
     int choice;
+    getDistance();
 
     do
     {

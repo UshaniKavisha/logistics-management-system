@@ -346,4 +346,11 @@ void findingTheLeastCostRoute(int startIndex, int endIndex)
         return;
     }
 
+    int citiesToVisit[4];
+    for(int i=0,j=0;i<cityCount;i++)
+    {
+       if(i!=startIndex && i!=endIndex)citiesToVisit[j++] = i;
+    }
+
+
 }

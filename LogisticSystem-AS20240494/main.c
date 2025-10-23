@@ -255,10 +255,10 @@ int chooseVehicle()
     printf("Choose you want vehicle(Enter number (Van:0 ,Truck:1, Lorry:2)): ");
     scanf("%d",&choice);
 
-    if(choice<1 || choice>(VEHICLE-1))
+    if(choice<0 || choice>=VEHICLE)
     {
         printf("Invalid choice \n");
-        return ;
+        return -1;
     }
 
     return choice;
@@ -276,10 +276,10 @@ void deliveryRequestHandling()
     int sourceCity,destinationCity;
 
     printf("Enter source city number: ");
-    scanf("%d",sourceCity);
+    scanf("%d",&sourceCity);
 
     printf("Enter destination city number: ");
-    scanf("%d",destinationCity);
+    scanf("%d",&destinationCity);
 
     if(sourceCity<1 || sourceCity==destinationCity || sourceCity>cityCount || destinationCity<1 || destinationCity>cityCount)
     {
@@ -302,6 +302,7 @@ void deliveryRequestHandling()
     if(weight>capacity[vehicalType])
     {
         printf("You entered weight exceeds vehicle capacity!\n");
+        return;
     }
 
     float D = distance[sourceCity-1][destinationCity-1];
@@ -346,7 +347,7 @@ void deliveryRequestHandling()
     printf("Minimum Distance: %.2f km\n",D);
     printf("Vehicle: %s\n",vehicle[vehicalType]);
     printf("Weight: %.2f kg\n",weight);
-    printf("n----------------------------------------------------------\n");
+    printf("\n----------------------------------------------------------\n");
     printf("Base Cost: %.2f LKR\n",deliveryCost);
     printf("Fuel Used: %.2f L\n",fuelConsumption);
     printf("Fuel Cost: %.2f LKR\n",fuelCost);
@@ -354,7 +355,7 @@ void deliveryRequestHandling()
     printf("Profit: %.2f LKR\n",profit);
     printf("Customer Charge: %.2f LKR\n",customerCharge);
     printf("Estimated Time: %.2f hours\n",delivaryTime);
-    printf("n----------------------------------------------------------\n");
+    printf("\n----------------------------------------------------------\n");
 }
 
 void findingTheLeastCostRoute(int startIndex, int endIndex)

@@ -44,6 +44,7 @@ void displayDistance();
 void displayVehicle();
 int chooseVehicle();
 void deliveryRequestHandling();
+void findingTheLeastCostRoute();
 
 
 int main()
@@ -335,4 +336,9 @@ void deliveryRequestHandling()
     {
         printf("You reached maximum delivery.....\n");
     }
+}
+
+void findingTheLeastCostRoute()
+{
+
 }

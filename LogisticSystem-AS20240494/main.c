@@ -336,6 +336,24 @@ void deliveryRequestHandling()
     {
         printf("You reached maximum delivery.....\n");
     }
+
+    printf("\n----------------------------------------------------------\n");
+    printf("DELIVERY COST ESTIMATION\n");
+    printf("\n----------------------------------------------------------\n");
+    printf("From: %s\n",cities[sourceCity-1]);
+    printf("To: %s\n",cities[destinationCity-1]);
+    printf("Minimum Distance: %.2f km\n",D);
+    printf("Vehicle: %s\n",vehicle[vehicalType]);
+    printf("Weight: %.2f kg\n",weight);
+    printf("n----------------------------------------------------------\n");
+    printf("Base Cost: %.2f LKR\n",deliveryCost);
+    printf("Fuel Used: %.2f L\n",fuelConsumption);
+    printf("Fuel Cost: %.2f LKR\n",fuelCost);
+    printf("Operational Cost: %.2f LKR\n",totalOperationalCost);
+    printf("Profit: %.2f LKR\n",profit);
+    printf("Customer Charge: %.2f LKR\n",customerCharge);
+    printf("Estimated Time: %.2f hours\n",delivaryTime);
+    printf("n----------------------------------------------------------\n");
 }
 
 void findingTheLeastCostRoute(int startIndex, int endIndex)

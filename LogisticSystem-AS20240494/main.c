@@ -97,7 +97,15 @@ int main()
                 deliveryRequestHandling();
                 break;
             case 9:
-                findingTheLeastCostRoute(startIndex- 1, endIndex- 1);
+                {
+                    int start, end;
+
+                    printf("Enter start city number: ");
+                    scanf("%d",&start);
+                    printf("Enter end city number: ");
+                    scanf("%d",&end);
+                    findingTheLeastCostRoute(start -1,end -1);
+                }
                 break;
             case 0:
                 printf("Exiting the program....\n");

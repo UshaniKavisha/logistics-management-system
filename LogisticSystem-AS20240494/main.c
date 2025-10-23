@@ -372,4 +372,11 @@ void findingTheLeastCostRoute(int startIndex, int endIndex)
          }
     }
 
+    printf("The Least-Cost Route(Least-Distance): ");
+    for(int i=0;i<cityCount;i++)
+    {
+        printf("%s to ",cities[bestRoute[i]]);
+    }
+    printf("\nMinimum Distance: %d km\n",minDistance);
+
 }

@@ -229,7 +229,7 @@ void getDistance()
     {
         for(int j=0;j<MAX_CITIES;j++)
         {
-            {if(i==j)
+            if(i==j)
                 distance[i][j]=0;
              else
                 distance[i][j]=-1;

@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <limits.h>
 #define MAX_CITIES 30
 #define VEHICLE 3
 #define FUEL_PRICE 310.0

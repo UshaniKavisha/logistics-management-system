@@ -46,6 +46,7 @@ void displayVehicle();
 int chooseVehicle();
 void deliveryRequestHandling();
 void findingTheLeastCostRoute(int startIndex, int endIndex);
+void performanceReport();
 
 
 int main()
@@ -304,12 +305,12 @@ void displayDistance()
 
 void displayVehicle()
 {
-    printf("Type\tCapacity(kg)\tRate(LKR)\tAvg Speed(km/h)\tFuel Efficiency(km/l)\t");
-    printf("- - - - - - - - - - - - - - - - - - - - - - - -- - - - - - - - - - - - - -");
+    printf("Type\tCapacity(kg)\tRate(LKR)\tAvg Speed(km/h)\tFuel Efficiency(km/l)\t\n");
+    printf("- - - - - - - - - - - - - - - - - - - - - - - -- - - - - - - - - - - - - -\n");
 
     for (int i=0;i<VEHICLE;i++)
     {
-        printf("%s \t %d \t %d \t %d \t %d \t ",vehicle[i],capacity[i],rate[i],avgSpeed[i],fuelEfficiency[i]);
+        printf("%s \t %d \t %d \t %d \t %d \t \n",vehicle[i],capacity[i],rate[i],avgSpeed[i],fuelEfficiency[i]);
 
     }
 
@@ -465,5 +466,11 @@ void findingTheLeastCostRoute(int startIndex, int endIndex)
         printf("%s to ",cities[bestRoute[i]]);
     }
     printf("\nMinimum Distance: %d km\n",minDistance);
+
+}
+
+
+void performanceReport()
+{
 
 }

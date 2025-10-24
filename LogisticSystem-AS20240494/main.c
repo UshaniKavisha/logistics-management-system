@@ -68,6 +68,7 @@ int main()
         printf("7.Display vehicle details\n");
         printf("8.Handle a delivery request\n");
         printf("9.Find least cost route(limited to 4 cities only)\n");
+        printf("10.View Performance Report\n");
         printf("0.Exit.............\n");
         printf("Enter your choice: ");
         scanf("%d",&choice);
@@ -109,6 +110,9 @@ int main()
                     scanf("%d",&end);
                     findingTheLeastCostRoute(start -1,end -1);
                 }
+                break;
+            case 10:
+                performanceReport();
                 break;
             case 0:
                 printf("Exiting the program....\n");

@@ -285,23 +285,22 @@ void displayDistance()
         return;
     }
 
-    printf("\n Distance Table......\n");
+    printf("\n Distance Table\n-------------------------------------------------------------\n");
+    printf("%15s"," ");
     for(int i=0; i<cityCount;i++)
     {
-        printf("%s",cities[i]);
+        printf("%15s",cities[i]);
     }
-
     printf("\n");
-
     for(int i=0; i<cityCount;i++)
     {
-        printf("%s",cities[i]);
+        printf("%15s",cities[i]);
         for(int j=0;j<cityCount;j++)
         {
             if(distance[i][j]==-1)
-                printf("%s","-");
+                printf("%15s","-");
             else
-                printf("%d",distance[i][j]);
+                printf("%15d",distance[i][j]);
         }
         printf("\n");
     }
@@ -432,6 +431,12 @@ void deliveryRequestHandling()
 
 void findLeastCostRoute(int startIndex, int endIndex)
 {
+    if (cityCount<2)
+    {
+        printf("Add at least 2 cities first.\n");
+        return;
+    }
+
     if(cityCount>4)
     {
         printf("Route search is limited to a maximum of 4 cities only.\n");
@@ -446,28 +451,46 @@ void findLeastCostRoute(int startIndex, int endIndex)
 
     int minDistance = INT_MAX;
     int bestRoute[4];
+    int routeLength = 0;
 
-    for(int i=0;i<cityCount-2;i++)
+    if (distance[startIndex][endIndex]!=-1)
     {
-         for(int j=0;j<cityCount-2;j++)
-         {
-             if(i==j)continue;
-            int totalDist=distance[startIndex][citiesToVisit[i]]+distance[citiesToVisit[i]][citiesToVisit[j]]+distance[citiesToVisit[j]][endIndex];
-            if(totalDist<minDistance)
-            {
-                minDistance=totalDist;
-                bestRoute[0]=startIndex;
-                bestRoute[1]=citiesToVisit[i];
-                bestRoute[2]=citiesToVisit[j];
-                bestRoute[3]=endIndex;
-            }
-         }
+        minDistance = distance[startIndex][endIndex];
+        bestRoute[0] = startIndex;
+        bestRoute[1] = endIndex;
+        routeLength = 2;
     }
 
-    printf("The Least-Cost Route(Least-Distance): ");
     for(int i=0;i<cityCount;i++)
     {
-        printf("%s to ",cities[bestRoute[i]]);
+
+        if(i==startIndex || i==endIndex)continue;
+        if (distance[startIndex][i]==-1 || distance[i][endIndex]==-1) continue;
+
+        int totalDist=distance[startIndex][i]+distance[i][endIndex];
+        if(totalDist<minDistance)
+        {
+            minDistance=totalDist;
+            bestRoute[0]=startIndex;
+            bestRoute[1]=i;
+            bestRoute[2]=endIndex;
+            routeLength = 3;
+        }
+    }
+
+        if (minDistance==INT_MAX)
+    {
+        printf("No route found between selected cities.\n");
+        return;
+    }
+
+
+    printf("\nThe Least-Cost Route(Least-Distance): \n");
+    for(int i=0;i<routeLength;i++)
+    {
+        printf("%s",cities[bestRoute[i]]);
+        if (i < routeLength-1)
+        printf(" -> ");
     }
     printf("\nMinimum Distance: %d km\n",minDistance);
 

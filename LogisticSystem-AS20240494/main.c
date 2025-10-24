@@ -27,7 +27,7 @@ typedef struct {
     float operationalCost;
     float profit;
     float customerCharge;
-    float delivaryTime;
+    float deliveryTime;
 } DeliveryRecord;
 
 DeliveryRecord deliveries[MAX_DELIVERIES];
@@ -380,7 +380,7 @@ void deliveryRequestHandling()
     float F = FUEL_PRICE;
 
     float deliveryCost = D*R*(1+(weight/10000.0));
-    float delivaryTime=D/S;
+    float deliveryTime=D/S;
     float fuelConsumption=D/E;
     float fuelCost=fuelConsumption*F;
     float totalOperationalCost=deliveryCost+fuelCost;
@@ -399,7 +399,7 @@ void deliveryRequestHandling()
         deliveries[deliveryCount].operationalCost=totalOperationalCost;
         deliveries[deliveryCount].profit=profit;
         deliveries[deliveryCount].customerCharge=customerCharge;
-        deliveries[deliveryCount].delivaryTime=delivaryTime;
+        deliveries[deliveryCount].deliveryTime=deliveryTime;
         deliveryCount++;
     }
     else
@@ -422,7 +422,7 @@ void deliveryRequestHandling()
     printf("Operational Cost: %.2f LKR\n",totalOperationalCost);
     printf("Profit: %.2f LKR\n",profit);
     printf("Customer Charge: %.2f LKR\n",customerCharge);
-    printf("Estimated Time: %.2f hours\n",delivaryTime);
+    printf("Estimated Time: %.2f hours\n",deliveryTime);
     printf("\n----------------------------------------------------------\n");
 }
 
@@ -476,5 +476,21 @@ void performanceReport()
     {
         printf("\nNo deliveries have been completed yet....\n");
         return;
+    }
+
+    float totalDistance=0,totalTime=0,totalRevenue=0,totalProfit=0;
+    float longestDistance=0,shortestDistance=1e9;
+
+    for (int i=0;i<deliveryCount;i++)
+    {
+        totalDistance+=deliveries[i].distance;
+        totalTime+=deliveries[i].deliveryTime;
+        totalRevenue+=deliveries[i].customerCharge;
+        totalProfit+=deliveries[i].profit;
+
+        if (deliveries[i].distance>longestDistance)
+            longestDistance=deliveries[i].distance;
+        if (deliveries[i].distance<shortestDistance)
+            shortestDistance=deliveries[i].distance;
     }
 }

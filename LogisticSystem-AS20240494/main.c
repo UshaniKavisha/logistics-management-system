@@ -493,6 +493,7 @@ void performanceReport()
         if (deliveries[i].distance<shortestDistance)
             shortestDistance=deliveries[i].distance;
     }
+    float avgTime=totalTime/deliveryCount;
 
     printf("\n---------------------------------------------------\n");
     printf("PERFORMANCE REPORT\n");

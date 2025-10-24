@@ -411,7 +411,7 @@ void deliveryRequestHandling()
         printf("You reached maximum delivery.....\n");
     }
 
-    printf("\n----------------------------------------------------------\n");
+    printf("\n======================================================\n");
     printf("DELIVERY COST ESTIMATION \n");
     printf("----------------------------------------------------------\n");
     printf("From: %s\n",cities[sourceCity-1]);
@@ -427,7 +427,7 @@ void deliveryRequestHandling()
     printf("Profit: %.2f LKR\n",profit);
     printf("Customer Charge: %.2f LKR\n",customerCharge);
     printf("Estimated Time: %.2f hours\n",deliveryTime);
-    printf("\n----------------------------------------------------------\n");
+    printf("\n======================================================\n");
 }
 
 void findLeastCostRoute(int startIndex, int endIndex)
@@ -499,7 +499,7 @@ void performanceReport()
     }
     float avgTime=totalTime/deliveryCount;
 
-    printf("\n---------------------------------------------------\n");
+    printf("\n======================================================\n");
     printf("DELIVERY PERFORMANCE REPORT\n");
     printf("------------------------------------------------------\n");
     printf("Total Deliveries Completed  : %d\n",deliveryCount);
@@ -512,5 +512,5 @@ void performanceReport()
     printf("-----------------------------------------------------\n");
     printf("Longest Route Distance      : %.2f km\n",longestDistance);
     printf("Shortest Route Distance     : %.2f km\n",shortestDistance);
-    printf("-----------------------------------------------------\n");
+    printf("======================================================\n");
 }

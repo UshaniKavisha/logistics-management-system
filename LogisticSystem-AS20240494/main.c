@@ -472,5 +472,9 @@ void findingTheLeastCostRoute(int startIndex, int endIndex)
 
 void performanceReport()
 {
-
+    if (deliveryCount == 0)
+    {
+        printf("\nNo deliveries have been completed yet....\n");
+        return;
+    }
 }

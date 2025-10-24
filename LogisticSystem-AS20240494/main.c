@@ -56,9 +56,9 @@ int main()
 
     do
     {
-        printf("\n------------------------------------------------------\n");
+        printf("\n\n------------------------------------------------------\n");
         printf("LOGISTICS MANAGEMENT SYSTEM\n");
-        printf("-------------------------------------------------------\n");
+        printf("------------------------------------------------------\n");
         printf("1.Add a new city\n");
         printf("2.Rename a city\n");
         printf("3.Remove a city\n");
@@ -196,7 +196,7 @@ void removeCity()
     int index;
     listCities();
 
-    printf("Enter the number of the city you want to rename: ");
+    printf("Enter the number of the city you want to remove: ");
     scanf("%d",&index);
 
     if(index < 1 || index > cityCount)
@@ -309,12 +309,12 @@ void displayDistance()
 
 void displayVehicle()
 {
-    printf("Type\tCapacity(kg)\tRate(LKR)\tAvg Speed(km/h)\tFuel Efficiency(km/l)\t\n");
-    printf("- - - - - - - - - - - - - - - - - - - - - - - -- - - - - - - - - - - - - -\n");
+    printf("Type\tCapacity(kg)\tRate(LKR)\tAvg Speed(km/h)\t\tFuel Efficiency(km/l)\t\n");
+    printf("---------------------------------------------------------------------------------\n");
 
     for (int i=0;i<VEHICLE;i++)
     {
-        printf("%s \t %d \t %d \t %d \t %d \t \n",vehicle[i],capacity[i],rate[i],avgSpeed[i],fuelEfficiency[i]);
+        printf("%s \t %d \t\t %d \t\t %d \t\t\t %d \n",vehicle[i],capacity[i],rate[i],avgSpeed[i],fuelEfficiency[i]);
 
     }
 

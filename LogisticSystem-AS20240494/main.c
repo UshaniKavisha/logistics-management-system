@@ -666,4 +666,5 @@ void saveDeliveries()
             deliveries[i].customerCharge
             );
     }
+    fclose(filePointer);
 }

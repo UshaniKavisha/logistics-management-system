@@ -49,6 +49,7 @@ void findLeastCostRoute(int startIndex, int endIndex);
 void performanceReport();
 
 void loadRoutes();
+void saveRoutes();
 
 
 int main()
@@ -578,4 +579,9 @@ void loadRoutes()
         }
     }
     fclose(fp);
+}
+
+void saveRoutes()
+{
+
 }

@@ -638,4 +638,5 @@ void loadDeliveries()
         deliveryCount++;
         if(deliveryCount>=MAX_DELIVERIES) break;
     }
+    fclose(filePointer);
 }

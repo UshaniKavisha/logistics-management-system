@@ -50,7 +50,7 @@ void performanceReport();
 
 void loadRoutes();
 void saveRoutes();
-
+void loadDeliveries();
 
 int main()
 {
@@ -607,4 +607,9 @@ void saveRoutes()
         fprintf(filePointer,"\n");
     }
     fclose(filePointer);
+}
+
+void loadDeliveries()
+{
+
 }

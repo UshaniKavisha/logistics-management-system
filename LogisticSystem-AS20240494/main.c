@@ -551,4 +551,15 @@ void loadRoutes()
     }
 
     char line[1024];
+
+    if(fgets(line,sizeof(line),filePointer))
+    {
+        char *token=strtok(line,",\n");
+        cityCount = 0;
+        while(token && cityCount<MAX_CITIES)
+        {
+            strcpy(cities[cityCount++],token);
+            token = strtok(NULL,",\n");
+        }
+    }
 }

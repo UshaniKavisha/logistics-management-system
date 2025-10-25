@@ -578,10 +578,10 @@ void loadRoutes()
             }
         }
     }
-    fclose(fp);
+    fclose(filePointer);
 }
 
 void saveRoutes()
 {
-
+    FILE *filePointer=fopen("routes.txt", "w");
 }

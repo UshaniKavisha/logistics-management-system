@@ -56,6 +56,7 @@ void saveDeliveries();
 int main()
 {
     int choice;
+    loadRoutes();
     initializeDistance();
 
     do

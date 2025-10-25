@@ -636,5 +636,6 @@ void loadDeliveries()
     {
         deliveries[deliveryCount].deliveryTime=deliveries[deliveryCount].distance/avgSpeed[deliveries[deliveryCount].vehicleType];
         deliveryCount++;
+        if(deliveryCount>=MAX_DELIVERIES) break;
     }
 }

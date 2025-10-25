@@ -577,4 +577,5 @@ void loadRoutes()
             }
         }
     }
+    fclose(fp);
 }

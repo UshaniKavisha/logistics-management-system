@@ -51,6 +51,7 @@ void performanceReport();
 void loadRoutes();
 void saveRoutes();
 void loadDeliveries();
+void saveDeliveries();
 
 int main()
 {
@@ -639,4 +640,9 @@ void loadDeliveries()
         if(deliveryCount>=MAX_DELIVERIES) break;
     }
     fclose(filePointer);
+}
+
+void saveDeliveries()
+{
+
 }

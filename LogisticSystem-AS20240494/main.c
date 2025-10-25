@@ -606,4 +606,5 @@ void saveRoutes()
         }
         fprintf(filePointer,"\n");
     }
+    fclose(filePointer);
 }

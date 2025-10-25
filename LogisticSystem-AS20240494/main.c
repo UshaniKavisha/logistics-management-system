@@ -650,4 +650,9 @@ void saveDeliveries()
         printf("Error saving deliveries.txt,Starting with an empty delivery list\n");
         return;
     }
+
+    for(int i=0;i<deliveryCount;i++)
+    {
+
+    }
 }

@@ -584,4 +584,9 @@ void loadRoutes()
 void saveRoutes()
 {
     FILE *filePointer=fopen("routes.txt", "w");
+    if(filePointer==NULL)
+    {
+        printf("Error saving routes.txt,Starting with an empty city list.\n");
+        return;
+    }
 }

@@ -122,6 +122,7 @@ int main()
                 break;
             case 0:
                 saveRoutes();
+                saveDeliveries();
                 printf("Exiting the program....\n");
                 break;
             default:

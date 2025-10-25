@@ -616,7 +616,7 @@ void loadDeliveries()
 
     if(filePointer==NULL)
     {
-        printf("deliveries.txt not found. Starting with empty delivery list.\n");
+        printf("deliveries.txt not found. Starting with an empty delivery list.\n");
         return;
     }
 
@@ -645,4 +645,9 @@ void loadDeliveries()
 void saveDeliveries()
 {
     FILE *filePointer=fopen("deliveries.txt","w");
+    if(filePointer==NULL)
+    {
+        printf("Error saving deliveries.txt,Starting with an empty delivery list\n");
+        return;
+    }
 }

@@ -611,5 +611,5 @@ void saveRoutes()
 
 void loadDeliveries()
 {
-
+    FILE *filePointer=fopen("deliveries.txt","r");
 }

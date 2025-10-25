@@ -543,4 +543,10 @@ void performanceReport()
 void loadRoutes()
 {
     FILE *filePointer=fopen("routes.txt", "r");
+
+    if(filePointer == NULL)
+    {
+       printf("Routes.txt not found. Starting with this programme empty city list.\n");
+       return;
+    }
 }

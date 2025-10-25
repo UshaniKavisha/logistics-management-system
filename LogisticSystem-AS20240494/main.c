@@ -48,6 +48,8 @@ void deliveryRequestHandling();
 void findLeastCostRoute(int startIndex, int endIndex);
 void performanceReport();
 
+void loadRoutes();
+
 
 int main()
 {
@@ -536,4 +538,9 @@ void performanceReport()
     printf("Longest Route Distance      : %.2f km\n",longestDistance);
     printf("Shortest Route Distance     : %.2f km\n",shortestDistance);
     printf("======================================================\n");
+}
+
+void loadRoutes()
+{
+
 }

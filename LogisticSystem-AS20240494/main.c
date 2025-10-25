@@ -549,4 +549,6 @@ void loadRoutes()
        printf("Routes.txt not found. Starting with this programme empty city list.\n");
        return;
     }
+
+    char line[1024];
 }

@@ -612,4 +612,10 @@ void saveRoutes()
 void loadDeliveries()
 {
     FILE *filePointer=fopen("deliveries.txt","r");
+
+    if(filePointer==NULL)
+    {
+        printf("deliveries.txt not found. Starting with empty delivery list.\n");
+        return;
+    }
 }

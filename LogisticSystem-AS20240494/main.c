@@ -586,7 +586,14 @@ void saveRoutes()
     FILE *filePointer=fopen("routes.txt", "w");
     if(filePointer==NULL)
     {
-        printf("Error saving routes.txt,Starting with an empty city list.\n");
+        printf("Error saving routes.txt, Starting with an empty city list.\n");
         return;
     }
+
+    for(int i=0;i<cityCount;i++)
+    {
+        fprintf(filePointer,"%s",cities[i]);
+        if(i<cityCount-1) fprintf(filePointer,",");
+    }
+    fprintf(filePointer,"\n");
 }

@@ -542,5 +542,5 @@ void performanceReport()
 
 void loadRoutes()
 {
-
+    FILE *filePointer=fopen("routes.txt", "r");
 }

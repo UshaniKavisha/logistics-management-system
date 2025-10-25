@@ -653,7 +653,7 @@ void saveDeliveries()
 
     for(int i=0;i<deliveryCount;i++)
     {
-        fprintf(filePointer,"%d,%d,%.2f,%d,%.2f,%.2f,%.2f,%.2f\n",
+        fprintf(filePointer,"%d,%d,%.2f,%d,%.2f,%.2f,%.2f,%.2f,%.2f\n",
             deliveries[i].sourceCity,
             deliveries[i].destinationCity,
             deliveries[i].weight,
@@ -661,6 +661,7 @@ void saveDeliveries()
             deliveries[i].distance,
             deliveries[i].deliveryCost,
             deliveries[i].fuelCost,
-            deliveries[i].operationalCost,);
+            deliveries[i].operationalCost,
+            deliveries[i].profit,);
     }
 }

@@ -653,8 +653,9 @@ void saveDeliveries()
 
     for(int i=0;i<deliveryCount;i++)
     {
-        fprintf(filePointer,"%d\n,
-            deliveries[i].sourceCity,);
+        fprintf(filePointer,"%d,%d\n",
+            deliveries[i].sourceCity,
+            deliveries[i].destinationCity,);
 
     }
 }

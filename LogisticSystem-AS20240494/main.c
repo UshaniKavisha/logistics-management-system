@@ -620,4 +620,7 @@ void loadDeliveries()
     }
 
     deliveryCount = 0;
+
+    while(fscanf(filePointer,"%d\n",
+                 &deliveries[deliveryCount].sourceCity,))
 }

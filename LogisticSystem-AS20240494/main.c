@@ -596,4 +596,14 @@ void saveRoutes()
         if(i<cityCount-1) fprintf(filePointer,",");
     }
     fprintf(filePointer,"\n");
+
+    for(int i=0;i<cityCount;i++)
+    {
+        for(int j=0;j<cityCount;j++)
+        {
+            fprintf(filePointer,"%d",distance[i][j]);
+            if(j < cityCount - 1) fprintf(filePointer,",");
+        }
+        fprintf(filePointer,"\n");
+    }
 }

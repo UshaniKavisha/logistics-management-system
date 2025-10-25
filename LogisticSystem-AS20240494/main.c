@@ -120,6 +120,7 @@ int main()
                 performanceReport();
                 break;
             case 0:
+                saveRoutes();
                 printf("Exiting the program....\n");
                 break;
             default:

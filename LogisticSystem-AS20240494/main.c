@@ -618,4 +618,6 @@ void loadDeliveries()
         printf("deliveries.txt not found. Starting with empty delivery list.\n");
         return;
     }
+
+    deliveryCount = 0;
 }

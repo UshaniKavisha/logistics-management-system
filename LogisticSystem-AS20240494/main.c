@@ -621,7 +621,7 @@ void loadDeliveries()
 
     deliveryCount = 0;
 
-    while(fscanf(filePointer,"%d,%d,%f,%d,%f,%f,%f,%f,%f\n",
+    while(fscanf(filePointer,"%d,%d,%f,%d,%f,%f,%f,%f,%f,%f\n",
                  &deliveries[deliveryCount].sourceCity,
                  &deliveries[deliveryCount].destinationCity,
                  &deliveries[deliveryCount].weight,
@@ -630,5 +630,6 @@ void loadDeliveries()
                  &deliveries[deliveryCount].deliveryCost,
                  &deliveries[deliveryCount].fuelCost,
                  &deliveries[deliveryCount].operationalCost,
-                 &deliveries[deliveryCount].profit,))
+                 &deliveries[deliveryCount].profit,
+                 &deliveries[deliveryCount].customerCharge))
 }

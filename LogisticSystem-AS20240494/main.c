@@ -621,6 +621,7 @@ void loadDeliveries()
 
     deliveryCount = 0;
 
-    while(fscanf(filePointer,"%d\n",
-                 &deliveries[deliveryCount].sourceCity,))
+    while(fscanf(filePointer,"%d,%d\n",
+                 &deliveries[deliveryCount].sourceCity,
+                 &deliveries[deliveryCount].destinationCity,))
 }

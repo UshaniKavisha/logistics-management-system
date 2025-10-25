@@ -562,4 +562,19 @@ void loadRoutes()
             token = strtok(NULL,",\n");
         }
     }
+    for(int i=0;i<cityCount;i++)
+    {
+        if(fgets(line,sizeof(line),filePointer))
+        {
+            char *token=strtok(line,",\n");
+            for(int j=0;j<cityCount;j++)
+            {
+                if(token)
+                {
+                    distance[i][j]=atoi(token);
+                    token = strtok(NULL,",\n");
+                }
+            }
+        }
+    }
 }

@@ -632,5 +632,9 @@ void loadDeliveries()
                  &deliveries[deliveryCount].operationalCost,
                  &deliveries[deliveryCount].profit,
                  &deliveries[deliveryCount].customerCharge
-                )==10)
+                 )==10)
+    {
+        deliveries[deliveryCount].deliveryTime=deliveries[deliveryCount].distance/avgSpeed[deliveries[deliveryCount].vehicleType];
+        deliveryCount++;
+    }
 }

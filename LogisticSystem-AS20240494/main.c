@@ -644,5 +644,5 @@ void loadDeliveries()
 
 void saveDeliveries()
 {
-
+    FILE *filePointer=fopen("deliveries.txt","w");
 }

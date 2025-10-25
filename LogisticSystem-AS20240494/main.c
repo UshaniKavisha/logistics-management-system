@@ -631,5 +631,6 @@ void loadDeliveries()
                  &deliveries[deliveryCount].fuelCost,
                  &deliveries[deliveryCount].operationalCost,
                  &deliveries[deliveryCount].profit,
-                 &deliveries[deliveryCount].customerCharge))
+                 &deliveries[deliveryCount].customerCharge
+                )==10)
 }

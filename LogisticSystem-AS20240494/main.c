@@ -79,7 +79,12 @@ int main()
         printf("10.View Performance Report\n");
         printf("0.Exit...\n");
         printf("Enter your choice: ");
-        scanf("%d",&choice);
+        if(scanf("%d",&choice)!=1)
+        {
+            printf("Invalid input! Enter a number.\n");
+            while(getchar()!='\n');
+            continue;
+        }
 
         switch (choice)
         {
@@ -172,7 +177,13 @@ void renameCity()
     int index;
 
     printf("Enter the number of the city you want to rename: ");
-    scanf("%d",&index);
+    if(scanf("%d",&index)!=1)
+      {
+          printf("Invalid input! Please enter a number.\n");
+          while(getchar()!='\n');
+          return;
+      }
+
 
     if(index < 1 || index > cityCount)
     {
@@ -375,6 +386,7 @@ void deliveryRequestHandling()
     if(distance[sourceCity-1][destinationCity-1]==-1)
     {
         printf("Distance between the selected cities has not been entered yet...\n");
+        return;
     }
 
     int vehicleType=chooseVehicle();
@@ -554,7 +566,7 @@ void loadRoutes()
 
     if(filePointer == NULL)
     {
-       printf("Routes.txt not found. Starting with this programme empty city list.\n");
+       printf("Routes.txt not found. Starting with empty city list.\n");
        return;
     }
 
